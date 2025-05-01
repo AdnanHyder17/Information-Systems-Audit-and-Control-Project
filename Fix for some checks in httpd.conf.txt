@@ -1,0 +1,18 @@
+# 1. Version Disclosure Fix
+ServerTokens Prod
+
+# 2. HTTP Methods Restriction
+<Location "/">
+    LimitExcept GET POST HEAD
+</Location>
+
+# 3. Server Signature
+ServerSignature Off
+
+# 4. TRACE Method
+TraceEnable Off
+
+# 5. HTTP Headers
+Header unset X-Powered-By
+Header unset Server
+Header unset X-AspNet-Version
